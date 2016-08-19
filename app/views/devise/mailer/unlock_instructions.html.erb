@@ -1,0 +1,8 @@
+<p>Hola <%= @resource.email %>!</p>
+
+<p>A sucedido algo que nos asusto, alguien intento entrar a tu cuenta repetidas veces pero debido al exceso de numeros de intentos hemos bloqueado temporalmente la cuenta para proteger tus datos.</p>
+
+<p>Haz click abajo para desbloquear la cuenta:</p>
+
+<p><%= link_to 'Desbloquear cuenta', unlock_url(@resource, unlock_token: @token) %></p>
+<p> Si crees que alguien esta intentado obtener tu informacion confidencial podemos ayudarte contactandote con un servicio de ciberseguridad  para encontrar al atacante y salvar tu informacion.</p>

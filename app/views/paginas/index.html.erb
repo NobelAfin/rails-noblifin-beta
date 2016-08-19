@@ -1,0 +1,746 @@
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>NOBLIFIN - Landing page</title>
+ 
+    <body data-spy="scroll">
+
+       <nav class="navbar header-v1 header-transparent navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header scroll-to">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">NOBLIFIN</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+
+                    <ul class="nav scroll-to navbar-nav"> 
+                        <li class="active"><a href="#home"> <b>Inicio</b></a></li>
+                        <li><a href="#features">Startups</a></li> 
+                        <li><a href="#historia">Historia</a></li>
+                        <li><a href="#pricing">Equipos</a></li> 
+                        <li><a href="#newsletter">suscribete</a></li>
+
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right"> 
+                      <% if user_signed_in? %>
+                        <li> <a href="<%= destroy_user_session_path %>" data-method='delete'> 
+                           Cerrar sesion
+                        </a></li>
+                      <% else %>
+                      <li><a href="<%= new_user_registration_path %>"> Registrate </a></li>
+                        <li><a href="<%= new_user_session_path %>"> Iniciar Sesion </a></li>
+                      <% end %> 
+                    </ul>
+                </div> <!--/.nav-collapse -->
+            </div> <!--/.container-fluid -->
+        </nav>  <!--navigation end here -->
+
+
+
+        <div class="absolutes">
+            <div id="owl-headsec">
+                <!-- Item -->
+                <div>
+                    <!-- Image -->
+                    <%= image_tag 'bearson.jpeg', :class => 'img-responsive'%>
+                </div>
+
+                <div>
+                    <%= image_tag 'rivfor.jpeg', :class => 'img-responsive'%>
+                </div>
+            </div>
+        </div>
+
+        <section id="home" class="banner-intro banner-slider">
+        
+            <div class="banner-inner">
+                <div class="container">
+                    <div class="up">
+                        <div class="col-sm-12  col-sm-offset-2 text-center wow animated bounceIn">
+                            <h2>Protegiendo lo noble del mundo...  Guiando a un mañana mejor</h2>
+                            <p class="lead">
+                                Ayudando a crear una humanidad de la que todos estemos orgullosos
+                            </p>
+                            <div class="scroll-to banner-buttons">
+                                <a href="#features" class="btn btn-lg btn-skin btn-radius">Aprender mas</a>
+                                <a  data-toggle="modal" data-target="#video-popup" class="btn btn-lg btn-radius btn-white">Ver Video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+              
+        <!--modal of video-->
+        <!-- Modal -->
+        <div class="modal video-modal fade" id="video-popup" tabindex="-1" role="dialog" aria-labelledby="video-popup">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fa fa-times"></span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kjN1eWhzPeA" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end the modal of video-->
+
+                 <!--SECCION 1.........................................-->
+        <section id="features">
+            <div class="container wow animated slideInUp" style="padding-top:4em;">
+                <div>
+                    <div class=" col-sm-offset center-title">
+                        <h1 class="head1">Enfoque en la innovacion social</h1>
+                        <p>
+                            <em>Somos un grupo de startups sociales.</em> Creemos firmemente en que la humanidad merece la oportunidad de mostrar que es mejor, pues vemos a las personas descorazonadas y tristes, han empezado a perder la esperanza, la historia a estado llena de grandes tristezas, grandes injusticias pero tambien han sucedido hechos que nos hacen sentir felices y nos llena de esperanza sabiendo que podemos mejorar. <b>Cada Startup aqui tiene el proposito de crear un mundo y una humanidad del que todos estemos orgullosos</b>
+                        </p>
+                    </div>
+                </div>
+           </div> 
+        </section>
+
+         <div class="vertical-align-child aside-feature-row">
+                    <div class="col-sm-3 margin-b-30 wow animated fadeInLeft" data-wow-delay="0.1s">
+                     <%= image_tag 'afinblanco.png', :class => 'img-responsive'%>
+
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-1 wow animated fadeInRight" data-wow-delay="0.2s">
+                        <h3>AFIN</h3>
+                        <h4>En busca de grandes soñadores</h4>
+                        <p>
+                           Nacimos de una sola pregunta, ¿Como podemos ayudar a lograr que este mundo sea un lugar en el que todos estemos orgullosos de nuestra vida?. La vida se trata sobre ser feliz, AFIN se trata sobre lograr que tu sueños se hagan una realidad, sea el sueño que tengas como: viajar por el mundo, ser deportista, tener un negocio, tener un auto, encontrar el amor, ayudar a la ecología, ser un buen líder ETC. Nosotros logramos que pasen de sueño a meta cumplida.
+                        </p>
+                        <p class="collapse" id="collapseExample">
+                        
+                           <a class="btn" href="#">Inscribirse</a>
+                           <a class="btn" href="#">Ir a pagina</a>
+                        </p>
+                        <a class="btn btn-icon-only" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Mostrar mas
+                        </a>
+                    </div>
+                </div>
+
+                <div class="vertical-align-child aside-feature-row">
+                    <div class="col-sm-3 margin-b-30 wow animated fadeInLeft" data-wow-delay="0.1s">
+                     <%= image_tag 'dmpos.png', :class => 'img-responsive'%>
+
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-1 wow animated fadeInRight" data-wow-delay="0.2s">
+                        <h3>DMPOS</h3>
+                        <h4>Haciendo accesible el poder crear un negocio</h4>
+                        <p>
+                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni. Sed ut perspiciatis unde omnis iste natus error sit voluptatem dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
+                        </p>
+                        <p class="collapse" id="dmpospre">
+                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni. Sed ut perspiciatis unde omnis iste natus error sit voluptatem dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
+                        </p>
+                        <a class="btn btn-icon-only" role="button" data-toggle="collapse" href="#dmpospre" aria-expanded="false" aria-controls="collapseExample">
+                            More
+                        </a>
+                    </div>
+                </div>
+
+
+<!--..............SECCION 2 ..............-->
+    <section class="section2" id="historia">
+        
+        <div class="col-sm-5 col-sm-offset-1 wow animated fadeInRight", data-wow-delay="0.2s">
+        <h3 class="h3sec2">En que creemos</h3>
+            <p> 
+                <b>La era que tanto esperabamos los soñadores,<br>La era que tanto temian los incredulos,<br>Algunos la llaman la Era digital o la Era de la informacion,<br>Pero nosotros la llamamos la era de las oportunidades.</b>
+            </p>
+            <p>
+                En NOBLIFIN estamos aprovechando esas oportunidades para hacer empresas sociales que generen cambios que generen un sentido de orgullo de en todos y este orgullo de estar haciendo las cosas correctas nos genere felicidad, por que no hay nada como crear algo y ser parte de algo que cree esperanza tal como dijo Charles Dickens <i>"Era el mejor de los tiempos, era el peor de los tiempos; <br>La edad de la sabiduria, y tambien de la locura; <br>La epoca de la luz y de las tinieblas; <br>La primavera de la esperanza y el invierno de la desesperacion; <br>Todo lo poseiamos, pero no teniamos nada; <br>En una palabra, aquella epoca era tan parecida a la actual"</i>
+            </p>
+            <p>
+                Estamos viviendo en un tiempo en el que la humanidad esta aterrada y a la ve entusiasmada por un futuro que creen esceptico
+            </p>
+            <p class="collapse" id="video1">
+                Los tiempos de cambio pueden traer esperanza y miedo, por eso es que nosotros actuamos ¿Que haras tu?<iframe width="560" height="315" src="https://www.youtube.com/embed/7Pq-S557XQU" frameborder="0" allowfullscreen></iframe>
+            </p>
+             <a class="btn btn-icon-only" role="button" data-toggle="collapse" href="#video1" aria-expanded="false" aria-controls="collapseExample"> Ver video</a>
+
+             <div class=" col-sm-offset-1 wow animated fadeInRight" data-wow-delay="0.4s">
+             <%= image_tag 'cascfor.jpeg', :class => 'img-responsive'%>
+             </div>
+        </div>
+        <div class="col-sm-6 margin-b-10 wow animated fadeInLeft" data-wow-delay="0.1s">
+            <%= image_tag 'snowtre.jpeg', :title => 'No esperemos un futuro sombrio, Creemos un futuro del que estemos orgullosos', :class => 'imgsec2 img-responsive' %>
+            <p class="psec3">
+                 Construyamos un futuro emocionante y del que estemos todos orgullosos, en NOBLIFIN buscamos ayuda y alianzas para desarrollar no solo tecnologia enfocada en lo social, si no el tener esperanza por un gran futuro porque lo estamos construyendo y te invitamos. <br><br><br>
+            </p>
+             <h3 class="h3ls2">Invitacion de NOBLIFIN</h3>
+                <ul class="forsec3">
+                    <h4 style="text-transform: capitalize; font-weight: 500; margin-bottom: 15px; color: #000;">Quiero...</h4>
+                     <li>Ser parte de una Startup o encontrar mi pasion <a href="https://wrapbootstrap.com/theme/assan-multi-purpose-8-themes-in-1-WB05F069P" target="_blank" class="btn btn-radius btn-skin btn-lg left">Equipo</a> 
+                     </li>
+                 
+                    <h4 style="text-transform: capitalize; font-weight: 500; margin-bottom: 15px; color: #000;">Soy...</h4>
+                     <li>
+                        Emprendedor o empresario y me interesa una alianza
+                        <a href="https://wrapbootstrap.com/theme/assan-multi-purpose-8-themes-in-1-WB05F069P" target="_blank" class="btn btn-radius btn-skin btn-lg left">Alianza</a> 
+                    </li>
+                       
+                    <h4 style="text-transform: capitalize; font-weight: 500; margin-bottom: 15px; color: #000;">Me interesa saber mas</h4>
+                    <li>Si tienes alguna duda nos puedes enviar un mensaje aqui <a href="https://wrapbootstrap.com/theme/assan-multi-purpose-8-themes-in-1-WB05F069P" target="_blank" class="btn btn-radius btn-skin btn-lg left">Mensaje</a> </li>
+                </ul>
+             
+        </div>
+    </section>
+
+
+        <!--................SECCION 3................................................................................................................................-->
+        
+              
+               <hr>
+                <div class="space-40"></div>
+                <div class=" wow animated fadeInUpBig" data-wow-delay="0.1s">
+                    <div class="col-sm-11 col-sm-offset-2 center-title container" id="pricing">
+                        <i class="icon-quote"></i>
+                        <h2>Areas y Equipos</h2>
+                        <p>Las empresas se forman con personas, investigan y desarrollan increibles tecnologias y no podemos parar de descubrir. Aqui podras encontrar los departamentos que componen NOBLIFIN, tal vez tengas alguna profesion o quieres ayudar o estas estudiando no importa hecha un vistazo y ve que te llama la atencion, si eres una empresa en busca de alianzas puedes ver con que areas podemos ayudar. </p>
+                    </div>
+                </div><!--center title row end-->
+
+<div class="ui-4 wow animated fadeInRight" data-wow-delay="0.9s" style="padding-bottom:5em;">                <!--Cuadro de secciones de NOBLIFIN-->
+            <div class="container">
+                <div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 ui-bor">
+                        <!-- UI Item Starts -->
+                        <div class="ui-item">
+                            <!-- Image -->
+                              <%= image_tag '1.jpg', :class => 'img-responsive' %>
+                            <!-- UI Content Starts -->
+                            <div class="ui-content ui-bg-red">
+                                <!-- Heading -->
+                                <h2>Robotica</h2>
+                                <!-- UI Content Hover -->
+                                <div class="ui-content-hover bg-red">
+                                    <!-- Heading -->
+                                    <h2><a href="#">Lorem Ipsum</a></h2>
+                                    <!-- Paragraph -->
+                                    <p>Excepteur sint occaecat cupidatat non proident occaecat cupidatat.</p>
+                                    <!-- UI Icon -->    
+                                    <div class="ui-icon">
+                                        <a href="#"><i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <!-- UI Content Ends -->
+                        </div>
+                        <!-- UI Item Ends -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 ui-bor">
+                        <!-- UI Item Starts -->
+                        <div class="ui-item">
+                            <!-- Image -->
+                            <%= image_tag '2.jpg', :class => 'img-responsive' %>
+                            <!-- UI Content Starts -->      
+                            <div class="ui-content ui-bg-blue">
+                                <!-- Heading -->
+                                <h2>FinTech</h2>
+                                <!-- UI Content Hover -->   
+                                <div class="ui-content-hover bg-blue">
+                                    <!-- Heading -->
+                                    <h2><a href="#">Eiusm Tempo</a></h2>
+                                    <!-- Paragraph -->
+                                    <p>Excepteur sint occaecat cupidatat non proident occaecat cupidatat.</p>
+                                    <!-- UI Icon -->
+                                    <div class="ui-icon">
+                                        <a href="#"><i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <!-- UI Content Ends -->    
+                        </div>
+                        <!-- UI Item Ends -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 ui-bor">
+                        <!-- UI Item Starts -->
+                        <div class="ui-item">
+                            <!-- Image -->
+                            <%= image_tag '3.jpg', :class => 'img-responsive' %>
+                            <!-- UI Content Starts -->
+                            <div class="ui-content ui-bg-yellow">
+                                <!-- Heading -->
+                                <h2>Videojuegos</h2>
+                                <!-- UI Content Hover -->
+                                <div class="ui-content-hover bg-yellow">
+                                    <!-- Heading -->
+                                    <h2><a href="#">Finib Bonor</a></h2>
+                                    <!-- Paragraph -->
+                                    <p>Excepteur sint occaecat cupidatat non proident occaecat cupidatat.</p>
+                                    <!-- UI Icon -->
+                                    <div class="ui-icon">
+                                        <a href="#"><i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- UI Content Ends -->    
+                        </div>
+                        <!-- UI Item Ends -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 ui-bor">
+                        <!-- UI Item Starts -->
+                        <div class="ui-item">
+                            <!-- Image -->
+                            <%= image_tag '4.jpg', :class => 'img-responsive' %>
+                            <!-- UI Content Starts -->  
+                            <div class="ui-content ui-bg-sblue">                            
+                                <!-- Heading -->
+                                <h2>E-commerce</h2>
+                                <!-- UI Content Hover -->
+                                <div class="ui-content-hover bg-slblue">
+                                    <!-- Heading -->
+                                    <h2><a href="#">Archi Beata</a></h2>
+                                    <!-- Paragraph -->
+                                    <p>Excepteur sint occaecat cupidatat non proident occaecat cupidatat.</p>
+                                    <!-- UI Icon -->
+                                    <div class="ui-icon">
+                                        <a href="#"><i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- UI Content Ends -->    
+                        </div>
+                        <!-- UI Item Ends -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 ui-bor">
+                        <!-- UI Item Starts -->
+                        <div class="ui-item">
+                            <!-- Image -->
+                            <%= image_tag '5.jpg', :class => 'img-responsive' %>
+                            <!-- UI Content Starts -->      
+                            <div class="ui-content ui-bg-lblue">
+                                <!-- Heading -->
+                                <h2>BioTech</h2>
+                                <!-- UI Content Hover -->
+                                <div class="ui-content-hover bg-lblue ">                         
+                                    <!-- Heading -->
+                                    <h2><a href="#">Nemo Enim</a></h2>
+                                    <!-- Paragraph -->
+                                    <p>Excepteur sint occaecat cupidatat non proident occaecat cupidatat.</p>
+                                    <!-- UI Icon -->
+                                    <div class="ui-icon">
+                                        <a href="#"><i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <!-- UI Content Ends -->    
+                        </div>
+                        <!-- UI Item Ends -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 ui-bor">
+                        <!-- UI Item Starts --> 
+                        <div class="ui-item">
+                            <!-- Image -->
+                            <%= image_tag '6.jpg', :class => 'img-responsive' %>  
+                            <!-- UI Content Starts -->
+                            <div class="ui-content ui-bg-rose-pink">
+                                <!-- Heading -->
+                                <h2>E-learning</h2>
+                                <!-- UI Content Hover -->
+                                <div class="ui-content-hover bg-rose">
+                                    <!-- Heading -->
+                                    <h2><a href="#">Aliqu Quaer</a></h2>
+                                    <!-- Paragraph -->
+                                    <p>Excepteur sint occaecat cupidatat non proident occaecat cupidatat.</p>
+                                    <!-- UI Icon -->
+                                    <div class="ui-icon">
+                                        <a href="#"><i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <!-- UI Content Ends -->
+                        </div>
+                        <!-- UI Item Ends -->   
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 ui-bor">
+                        <!-- UI Item Starts -->
+                        <div class="ui-item">
+                            <!-- Image -->
+                            <%= image_tag '7.jpg', :class => 'img-responsive' %>
+                            <!-- UI Content Starts -->
+                            <div class="ui-content ui-bg-orange">
+                                <!-- Heading -->
+                                <h2>Servicios</h2>
+                                <!-- UI Content Hover -->
+                                <div class="ui-content-hover bg-orange">
+                                    <!-- Heading -->
+                                    <h2><a href="#">Denou Pleas</a></h2>
+                                    <!-- Paragraph -->
+                                    <p>Excepteur sint occaecat cupidatat non proident occaecat cupidatat.</p>
+                                    <!-- UI Icon -->
+                                    <div class="ui-icon">
+                                        <a href="#"><i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- UI Content Ends -->    
+                        </div>
+                        <!-- UI Item Ends -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 ui-bor">
+                        <!-- UI Item Starts -->
+                        <div class="ui-item">
+                            <!-- Image -->
+                            <%= image_tag '8.jpg', :class => 'img-responsive' %>
+                            <!-- UI Content Starts -->
+                            <div class="ui-content ui-bg-purple">
+                                <!-- Heading -->
+                                <h2>IOT</h2>
+                                <!-- UI Content Hover -->
+                                <div class="ui-content-hover bg-purple">
+                                    <!-- Heading -->
+                                    <h2><a href="#">Internet de las cosas</a></h2>
+                                    <!-- Paragraph -->
+                                    <p>Excepteur sint occaecat cupidatat non proident occaecat cupidatat.</p>
+                                    <!-- UI Icon -->
+                                    <div class="ui-icon">
+                                        <a href="#"><i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- UI Content Starts -->  
+                        </div>
+                        <!-- UI Item Ends -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--......................END AWESOME UI GALLERY ........................................................................-->
+
+<!--...............SECCION 4................ EXPERIENCIAS Y FRACASOS DE NOBLIFIN........-->
+     
+<!-- Container -->
+        <div class="container" style="padding-bottom: 6em;"">
+            <!-- UI X -->
+            <h2 class="h3sec2" ">Experiencias y Fracasos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="ui-23">
+            
+                <div class="wow animated bounce" data-wow-delay="0.2s">
+                    <div class="col-md-3 col-sm-3">
+                        <!-- Nav One -->
+                        <div class="ui-nav-one">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="active"><a href="#block-one"  data-toggle="tab" aria-expanded="true"><span>Nobeltel</span></a></li>
+                                <li><a href="#block-two" data-toggle="tab"><span>Asterisk</span></a></li>
+                                <li><a href="#block-three"  data-toggle="tab"><span>Grafeno</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <!-- Tab Content -->
+                        <div class="tab-content">
+                            <!-- Tab Pane -->
+                            <div role="tabpanel" class="tab-pane fade active in" id="block-one">
+                                <!-- Heading -->
+                                <h2>Nobeltel</h2>
+                                <!-- Para -->
+                                <p>Empresa social de venta de celulares que la mitad de sus ganancias las repartia a sus empleados. La razon del fracaso: poco escalable, mercado ya saturado de celulares, la migracion a planes esta creciendo rapidamente</p>
+                            </div>
+                            <!-- Tab Pane -->
+                            <div role="tabpanel" class="tab-pane fade" id="block-two">
+                                <!-- Heading -->
+                                <h2>Duda 1 proyecto</h2>
+                                <p>Preguntar como puedo programar las versiones mobiles, en que seccion puedo introducir el codigo que deseo que se vea si llegan a determinada media</p>
+                            </div>
+                            <!-- Tab Pane -->
+                            <div role="tabpanel" class="tab-pane fade" id="block-three">
+                                <h2>Proyecto Grafeno</h2>
+                                <p>Proyecto que pretendia poner tecnologia de grafeno en Latinoamerica. Su mision era encontrar la forma de crear grafeno de una calidad Mayo a 94% de pureza a precios accesibles</p>
+                            </div>
+                            <!-- Tab Pane -->
+                            <div role="tabpanel" class="tab-pane fade" id="block-four">
+                                <h2>Duda 2</h2>
+                                <p>Como puedo validar en la seecion de registro de correo antes del footer que el correo introducido realmente existe en las bases de datos de putlook, gmail, yahoo, hotmail y otros servidores de cuentas de correo.</p>
+                            </div>
+                            <!-- Tab Pane -->
+                            <div role="tabpanel" class="tab-pane fade" id="block-five">
+                                <h2>DEVISE</h2>
+                                <p>cambiar devise a espanol con el formato que el maestro Oscar menciono, preguntar como se puede realizar ese cambio</p>
+                            </div>
+                            <!-- Tab Pane -->
+                            <div role="tabpanel" class="tab-pane fade" id="block-six">
+                                <h2> CDN</h2>
+                                <p>de los elementos extras para que baje de peso la aplicacion de NOBLIFIN de casi 15,000 lineas a cerca de 5000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <!-- Nav Two -->
+                        <div class="ui-nav-two">
+                            <!-- Nav Tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li><a href="#block-four"  data-toggle="tab"><span>University</span></a></li>
+                                <li><a href="#block-five" data-toggle="tab"><span>Bookmark</span></a></li>
+                                <li><a href="#block-six"  data-toggle="tab"><span>Toggle</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /UI X -->
+        </div><!-- /Container -->
+
+
+
+
+     <!--.................SECTION 5...............ALIADOS DE NOBLIFIN.................................................CONOCIDOS-->
+     <!--gallery-->
+<!-- UI # -->
+        <div class="ui-270 container wow animated rollIn" data-wow-delay="0.9s">
+        <h2 class="h3sec2" ">Aliados</h2>
+            <!-- Container -->
+            <div class="container">
+                <!-- Nav Block -->
+                <div class="nav-block">
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <!-- Tab Pane -->
+                        <div class="tab-pane fade in active" id="tab-1">
+                            <!-- Tab Pane Image -->
+                            <div class="tab-pane-img" style="padding-bottom: 9.65em;">
+                                <!-- Image -->
+                                <a href="#"><%= image_tag 'fintechmexico.png', :class => 'img-responsive' %></a>
+                                <!-- Bg Raster -->
+                                <div class="bg-raster"></div>
+                            </div>
+                            <!-- Content -->
+                            <div class="content">
+                                <!-- Heading -->
+                                <h4>Mistaken</h4>
+                                <!-- Paragraph -->
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti corrupti quos dolores.</p>
+                            </div>  
+                        </div>
+                        <div class="tab-pane fade" id="tab-2">
+                            <div class="tab-pane-img" style="padding-bottom: 15.7em;">
+                                <a href="#" class="bg-img"><%= image_tag 'asem2.png', :class => 'img-responsive'%></a>
+                                <div class="bg-raster"></div>
+                            </div>
+                            <div class="content">
+                                <h4>Accusamus</h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti corrupti quos dolores.</p>
+                            </div>  
+                        </div>
+                        <div class="tab-pane fade" id="tab-3">
+                            <div class="tab-pane-img">
+                                <a href="#" class="bg-img"><%= image_tag 'cidetec.png', :class => 'img-responsive' %></a>
+                                <div class="bg-raster"></div>
+                            </div>
+                            <div class="content">
+                                <h4>Dignissimos</h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti corrupti quos dolores.</p>
+                            </div>  
+                        </div>
+                        <div class="tab-pane fade" id="tab-4">
+                            <div class="tab-pane-img">
+                                <a href="#" class="bg-img"><%= image_tag 'a4.jpg', :class => 'img-responsive' %></a>
+                                <div class="bg-raster"></div>
+                            </div>
+                            <div class="content">
+                                <h4>Ducimusqui</h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti corrupti quos dolores.</p>
+                            </div>  
+                        </div>
+                        <div class="tab-pane fade" id="tab-5">
+                            <div class="tab-pane-img">
+                                <a href="#" class="bg-img"><%= image_tag 'a5.jpg', :class => 'img-responsive' %></a>
+                                <div class="bg-raster"></div>
+                            </div>
+                            <div class="content">
+                                <h4>Blanditiis</h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti corrupti quos dolores.</p>
+                            </div>  
+                        </div>
+                        <div class="tab-pane fade" id="tab-6">
+                            <div class="tab-pane-img">
+                                <a href="#" class="bg-img"><%= image_tag 'a6.jpg', :class => 'img-responsive' %></a>
+                                <div class="bg-raster"></div>
+                            </div>
+                            <div class="content">
+                                <h4>Praesentium</h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti corrupti quos dolores.</p>
+                            </div>  
+                        </div>
+                        <div class="tab-pane fade" id="tab-7">
+                            <div class="tab-pane-img">
+                                <a href="#" class="bg-img"><%= image_tag 'a7.jpg', :class => 'img-responsive' %></a>
+                                <div class="bg-raster"></div>
+                            </div>
+                            <div class="content">
+                                <h4>Voluptatum</h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti corrupti quos dolores.</p>
+                            </div>  
+                        </div>
+                        <div class="tab-pane fade" id="tab-8">
+                            <div class="tab-pane-img">
+                                <a href="#" class="bg-img"><%= image_tag 'a8.jpg', :class => 'img-responsive' %></a>
+                                <div class="bg-raster"></div>
+                            </div>
+                            <div class="content">
+                                <h4>Deleniti</h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti corrupti quos dolores.</p>
+                            </div>  
+                        </div>
+                        <div class="tab-pane fade" id="tab-9">
+                            <div class="tab-pane-img">
+                                <a href="#" class="bg-img"><%= image_tag 'a9.jpg', :class => 'img-responsive' %></a>
+                                <div class="bg-raster"></div>
+                            </div>
+                            <div class="content">
+                                <h4>Atquected</h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti corrupti quos dolores.</p>
+                            </div>  
+                        </div>
+                        <div class="tab-pane fade" id="tab-10">
+                            <div class="tab-pane-img">
+                                <a href="#" class="bg-img"><%= image_tag 'a10.jpg', :class => 'img-responsive' %></a>
+                                <div class="bg-raster"></div>
+                            </div>
+                            <div class="content">
+                                <h4>Pleasure</h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti corrupti quos dolores.</p>
+                            </div>  
+                        </div>
+                    </div>
+                    <!-- Owl -->
+                    <div class="owl">
+                        <!-- Custom Nav -->
+                        <div class="custom-nav">
+                            <a class="owl-prev"><i class="fa fa-angle-left"></i></a>
+                            <a class="owl-next"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                        <!-- Owl Content -->
+                        <div class="owl-content">
+                            <!-- Owl Carousel -->
+                            <div id="owl-carousel-tab" class="owl-carousel">
+                                <!-- Item -->
+                                <div class="item">
+                                    <!-- Image -->
+                                    <a href="#tab-1" data-toggle="tab"><%= image_tag 'fintechmexico.png', :class => 'img-responsive', :size => '544x544' %></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#tab-2" data-toggle="tab"><%= image_tag 'asem1.png', :class => 'img-responsive'%></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#tab-3" data-toggle="tab"><%= image_tag 'cidetec2.jpg', :class => 'img-responsive', :size => '600x600' %></a>
+                                </div>
+                                <div class="item">                          
+                                    <a href="#tab-4" data-toggle="tab"><%= image_tag 'tn4.jpg', :class => 'img-responsive' %></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#tab-5" data-toggle="tab"><%= image_tag 'tn5.jpg', :class => 'img-responsive' %></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#tab-6" data-toggle="tab"><%= image_tag 'tn6.jpg', :class => 'img-responsive' %></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#tab-7" data-toggle="tab"><%= image_tag 'tn7.jpg', :class => 'img-responsive' %></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#tab-8" data-toggle="tab"><%= image_tag 'tn8.jpg', :class => 'img-responsive' %></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#tab-9" data-toggle="tab"><%= image_tag 'tn9.jpg', :class => 'img-responsive' %></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#tab-10" data-toggle="tab"><%= image_tag 'tn10.jpg', :class => 'img-responsive' %></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+ 
+        <script type="text/javascript">
+            
+            /* Owl Carousel */
+            $(document).ready(function() {
+
+                var one = $("#owl-carousel-tab");
+                
+                one.owlCarousel({
+                    autoPlay: 4000, //Set AutoPlay to 3 seconds
+                    items : 5,
+                    mouseDrag : true,
+                    pagination : false,
+                    stopOnHover:true
+                });
+                
+                $(".owl-next").click(function(){
+                    one.trigger('owl.next');
+                 })
+                  
+                $(".owl-prev").click(function(){
+                    one.trigger('owl.prev');
+                })
+
+
+                var headsec = $("#owl-headsec");
+                
+                headsec.owlCarousel({
+                    autoPlay: 4000, //Set AutoPlay to 3 seconds
+                    items : 1,
+                    mouseDrag : true,
+                    pagination : false,
+                    stopOnHover:true
+                });
+
+            });
+        </script>
+<!--.................Carausel SECTION ENDED................................
+............................SECCION 6 ........................-->
+
+        <!--subscribe-->
+        <section id="newsletter" class="newsletter-section">
+            <div class="container">
+                <div>
+                    <div class=" center-title">
+                        <h2>Ayudemos todos a crear el Futuro</h2>
+                        <p>Entra en el mundo de NOBLIFIN</p>                                     
+                    </div>
+                </div><!--center title row end--> 
+                <div>
+                    <div class="lcol-4" style="width:100%; padding-left: 25%; padding-right: 25%">
+                        <form role="form" method="post" action="#" class="subscribe-form  assan-newsletter">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="email" placeholder="Introduce tu correo">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-lg btn-skin btn-radius" name="submit" type="submit">Registrarse</button>
+                                </span>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>   
+            </div>
+        </section>
+        <!--end subscribe-->
+
+    </body>

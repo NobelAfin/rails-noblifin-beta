@@ -1,0 +1,107 @@
+
+
+/* UI X */
+.ui-270 .nav-block{
+	max-width:670px;
+	margin:50px auto;
+	border:2px solid #fff;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+/* Tab Pane */
+.ui-270 .tab-content .tab-pane{
+	position:relative;
+}
+.ui-270 .tab-content .tab-pane .bg-raster{
+	background:url(../img/ui-270/raster.png);
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+}	
+/* Content */
+.ui-270 .tab-content .tab-pane .content{
+	position:absolute;
+	top:45%;
+	right:0px;
+	max-width:400px;
+	padding:15px 20px 20px;
+	color:#fff;
+	z-index:10000;
+	background:rgba(0,0,0,0.7);
+}
+@media (max-width: 480px){
+	.ui-270 .tab-content .tab-pane .content{
+		display:none;
+	}
+}
+.ui-270 .tab-content .tab-pane .content h4{
+	font-size:16px;
+	font-weight:600;
+	color:#fff;
+	text-transform:uppercase;
+}
+.ui-270 .tab-content .tab-pane .content p{
+	font-size:12px;
+	line-height:23px;
+}
+@media (max-width: 767px){
+	.ui-270 .tab-content .tab-pane .content{
+		top:40%;
+		padding:10px 15px 15px;
+	}	
+	.ui-270 .tab-content .tab-pane .content h4{
+		font-size:18px;
+		margin-bottom:3px;
+	}
+	.ui-270 .tab-content .tab-pane .content p{
+		font-size:13px;
+		line-height:23px;
+	}
+}
+/* Owl */
+.ui-270 .owl{
+	text-align:center;
+	padding:20px 0px;
+	background:#fff;
+	position:relative;
+	background:#fff url(../img/ui-270/bg.png) repeat;
+	box-shadow:inset 0px 0px 10px rgba(0,0,0,0.2);
+}
+/* Owl Content */
+.ui-270 .owl .owl-content{
+	margin:0px 40px;
+}
+/* Item */
+.ui-270 .owl .item  a img{
+	max-width:85px;
+	border-radius:50%;
+	display:inline-block;
+	border:2px solid #fff;
+	box-shadow:0px 0px 5px rgba(0,0,0,0.2);	
+	width: 7rem;
+    height: 7rem;
+}
+@media (max-width: 480px){
+	.ui-270 .owl{
+		padding:10px 0px;
+	}
+	.ui-270 .owl .item  a img{
+		max-width:75px;
+	}
+}
+/* Custom Nav */
+.ui-270 .owl .custom-nav a i{
+	cursor:pointer;
+	font-size:22px;
+	position:absolute;
+	top:40%;
+	z-index:1000;
+	color:#aaa;
+	font-weight:bold;
+}
+.ui-270 .owl .custom-nav a.owl-prev i{
+	left:20px;
+}
+.ui-270 .owl .custom-nav a.owl-next i{
+	right:20px;
+}

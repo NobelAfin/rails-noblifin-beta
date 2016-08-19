@@ -1,0 +1,35 @@
+<div class="tab-content devicen">
+  <div class="tab-pane active fade in" id="login-block">
+    <!-- Login Block Form -->
+    <div class="login-block-form">
+            <h2 class="padfornav">Iniciar Sesion</h2>
+            <!-- Border -->
+            <div class="bor bg-green"></div>
+            <!-- Form -->
+             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="field  form-group">
+                <%= f.label :correo %><br />
+                <%= f.email_field :email, autofocus: true, :placeholder => "Introduce Correo", :class => 'form-control' %>
+              </div>
+
+              <div class="field form-group">
+                <%= f.label :contraseña %><br />
+                <%= f.password_field :password, autocomplete: "off", :placeholder => "Introduce Contraseña", :class => 'form-control' %>
+              </div>
+
+              <% if devise_mapping.rememberable? -%>
+                <div class="field form-group">
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :recordar_sesion %>
+                </div>
+              <% end -%>
+
+              <div class="actions">
+                <%= f.submit "Inicia sesion" %>
+              </div>
+            <% end %>
+
+          <%= render "devise/shared/links" %>
+         </div>
+   </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="tab-content devicen">
+  <div class="tab-pane active fade in" id="login-block">
+    <!-- Login Block Form -->
+    <div class="login-block-form">
+			<h2 class="padfornav">Reenviar instrucciones de confirmacion</h2>
+
+			<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+			  <%= devise_error_messages! %>
+
+			  <div class="field form-group">
+			    <%= f.label :email %><br />
+			    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), :placeholder => "Introduce Correo", :class => 'form-control'  %>
+			  </div>
+
+			  <div class="actions">
+			    <%= f.submit "Completar reenvio" %>
+			  </div>
+			<% end %>
+
+			<%= render "devise/shared/links" %>
+       </div>
+   </div>
+</div>
